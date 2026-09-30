@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c4c6d0", "line-subtle": "#D3D8E1", "background": "#f9f9ff", "on-tertiary": "#ffffff", "on-primary-fixed": "#001b3d", "primary-fixed": "#d6e3ff", "surface-variant": "#dee2ee", "surface-panel": "#F5F7FB", "on-primary-container": "#7992c0", "secondary-fixed": "#d7e2ff", "surface": "#f9f9ff", "error": "#ba1a1a", "inverse-primary": "#aec7f8", "surface-bright": "#f9f9ff", "on-background": "#171c24", "bar-secondary": "#C3CEE0", "surface-dim": "#d6dae5", "on-surface": "#171c24", "tertiary-fixed": "#dfe3ea", "ink-muted": "#5B6472", "on-navy-muted": "#A9B6D0", "inverse-surface": "#2c3139", "primary-fixed-dim": "#aec7f8", "on-surface-variant": "#44474e", "ink-primary": "#151A22", "on-secondary-fixed": "#001b3f", "tertiary": "#12171b", "on-tertiary-container": "#8d9298", "surface-container-lowest": "#ffffff", "tertiary-container": "#262b30", "amber-risk": "#B07515", "inverse-on-surface": "#edf1fc", "surface-container-high": "#e4e8f4", "error-container": "#ffdad6", "on-primary-fixed-variant": "#2d4770", "outline": "#74777f", "surface-tint": "#455f8a", "on-error": "#ffffff", "tertiary-fixed-dim": "#c2c7cd", "secondary-container": "#a3c1fe", "on-secondary-container": "#2f4e83", "secondary-fixed-dim": "#abc7ff", "surface-container-low": "#eff3ff", "navy-deep": "#0B2A52", "primary": "#001533", "on-secondary": "#ffffff", "secondary": "#3f5e94", "surface-container-highest": "#dee2ee", "on-tertiary-fixed-variant": "#42474d", "primary-container": "#0b2a52", "navy-soft": "#1C3E72", "on-navy-bright": "#FFFFFF", "on-secondary-fixed-variant": "#26467b", "on-primary": "#ffffff", "line-hairline": "#E7E9EF", "on-error-container": "#93000a", "on-tertiary-fixed": "#171c21", "ink-faint": "#949AA6", "surface-container": "#eaeef9", "bg-canvas": "#FFFFFF" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "2.25rem", "gutter": "1.75rem", "space-md": "1rem", "margin": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-2xl": "3.5rem", "space-3xl": "4rem" }, "fontFamily": { "body-reading": [ "Hanken Grotesk" ], "headline-section": [ "Hanken Grotesk" ], "display-hero-mobile": [ "Hanken Grotesk" ], "headline-card": [ "Hanken Grotesk" ], "label-meta": [ "Hanken Grotesk" ], "headline-row": [ "Hanken Grotesk" ], "headline-lead-mobile": [ "Hanken Grotesk" ], "headline-lead": [ "Hanken Grotesk" ], "label-micro": [ "Hanken Grotesk" ], "metric-large": [ "Hanken Grotesk" ], "body-lead": [ "Hanken Grotesk" ], "label-section": [ "Hanken Grotesk" ], "display-hero": [ "Hanken Grotesk" ], "body-dense": [ "Hanken Grotesk" ] }, "fontSize": { "body-reading": [ "18px", { "lineHeight": "30px", "letterSpacing": "-0.003em", "fontWeight": "400" } ], "headline-section": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "450" } ], "display-hero-mobile": [ "36px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "400" } ], "headline-card": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "label-meta": [ "12.5px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-row": [ "19px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "450" } ], "headline-lead-mobile": [ "32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-lead": [ "52px", { "lineHeight": "54px", "letterSpacing": "-0.025em", "fontWeight": "400" } ], "label-micro": [ "11px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "metric-large": [ "32px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "body-lead": [ "20px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-section": [ "12.5px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-hero": [ "66px", { "lineHeight": "68px", "letterSpacing": "-0.03em", "fontWeight": "400" } ], "body-dense": [ "14.5px", { "lineHeight": "22px", "letterSpacing": "-0.006em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-bg-canvas font-body-reading text-ink-primary min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-bg-canvas/90 backdrop-blur-md border-b border-line-hairline"><div class="max-w-[1080px] mx-auto px-margin h-16 flex items-center justify-between"><div class="flex items-center gap-space-xl"><a class="flex items-center gap-space-sm group focus:outline-none focus:ring-1 focus:ring-navy-deep" data-path="latest" href="#"><svg class="w-6 h-6 shrink-0" fill="none" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="24" rx="1" stroke="#0B2A52" stroke-width="1.75" width="24" x="2" y="2"></rect><path d="M8 7H14.5C17.5 7 19.5 8.7 19.5 11.5C19.5 14.3 17.5 16 14.5 16H8V7Z" stroke="#0B2A52" stroke-linejoin="round" stroke-width="1.75"></path><path d="M14 16L20 22" stroke="#0B2A52" stroke-linecap="round" stroke-width="1.75"></path><circle cx="14.5" cy="11.5" fill="#0B2A52" r="1.25"></circle></svg><span class="font-headline-card text-headline-card tracking-tight font-medium text-navy-deep">Pharma Corridor</span></a><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-navy-deep font-semibold border-b-2 border-navy-deep pb-0.5"><a class="font-body-dense text-body-dense text-ink-muted hover:text-navy-deep transition-colors" data-path="latest" href="#">Latest</a><a class="font-body-dense text-body-dense text-ink-muted hover:text-navy-deep transition-colors" data-path="analysis" href="#">Analysis</a><div class="relative group py-2"><button class="font-body-dense text-body-dense text-ink-muted hover:text-navy-deep transition-colors flex items-center gap-1 focus:outline-none" type="button"><span>Corridors</span><span class="material-symbols-outlined text-[16px] text-ink-faint transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50 w-52"><div class="bg-bg-canvas border border-line-hairline rounded-none shadow-[0_12px_34px_rgba(16,38,69,0.12)] py-2"><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-india" href="#">India</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-united-states" href="#">United States</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-europe" href="#">Europe</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-china" href="#">China</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-mena" href="#">MENA</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-rest-of-world" href="#">Rest of World</a></div></div></div><div class="relative group py-2"><button class="font-body-dense text-body-dense text-ink-muted hover:text-navy-deep transition-colors flex items-center gap-1 focus:outline-none" type="button"><span>About</span><span class="material-symbols-outlined text-[16px] text-ink-faint transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50 w-48"><div class="bg-bg-canvas border border-line-hairline rounded-none shadow-[0_12px_34px_rgba(16,38,69,0.12)] py-2"><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="mission" href="#">Mission</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="editorial-standards" href="#">Editorial Standards</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="contribute" href="#">Contribute</a></div></div></div></nav></div><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center px-4 py-1.5 rounded-[999px] bg-navy-deep text-on-navy-bright font-label-section text-label-section hover:bg-navy-soft transition-colors tracking-wide" data-path="the-briefing" href="#">The Briefing</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-bg-canvas"><div class="flex flex-col w-full">
+<div class="w-full bg-surface-panel py-space-md">
+<div class="max-w-[1080px] mx-auto px-margin">
+<div class="flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm font-label-meta text-label-meta text-ink-muted">
+<a class="hover:text-navy-deep transition-colors" href="#">Home</a>
+<span class="text-ink-faint">/</span>
+<a class="hover:text-navy-deep transition-colors" href="#">Corridors</a>
+<span class="text-ink-faint">/</span>
+<span class="text-ink-primary font-medium">China</span>
+</div>
+<div class="inline-flex items-center gap-space-xs px-3 py-1 bg-surface-container-high rounded-[999px]">
+<span class="w-1.5 h-1.5 rounded-full bg-navy-deep"></span>
+<span class="font-label-meta text-label-meta text-navy-deep tracking-wider uppercase font-semibold">Strategic Corridor Dossier · Ref: COR-CN-2025</span>
+</div>
+</div>
+</div>
+</div>
+<section class="max-w-[1080px] mx-auto px-margin pt-space-2xl pb-space-xl w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-start">
+<div class="lg:col-span-8 space-y-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="font-label-section text-label-section uppercase tracking-widest text-navy-soft">Sovereign Supply Infrastructure</span>
+<span class="w-8 h-px bg-line-subtle"></span>
+<span class="font-label-meta text-label-meta text-ink-muted">NMPA Division I Analysis</span>
+</div>
+<h1 class="font-headline-lead text-headline-lead text-navy-deep tracking-tight">China</h1>
+<p class="font-body-lead text-body-lead text-ink-muted leading-relaxed">
+          The base of the global drug supply chain. China makes the chemistry almost everything else is built on: key starting materials, chemical intermediates, and active ingredients that flow to India, Europe, and the US. Now it is climbing the value chain into biologics and innovative pipelines, just as Western policy seeks to decouple.
+        </p>
+</div>
+<div class="lg:col-span-4 bg-surface-panel p-space-lg rounded-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between pb-space-sm">
+<span class="font-label-section text-label-section uppercase tracking-wider text-navy-deep">Corridor Profile Matrix</span>
+<span class="material-symbols-outlined text-navy-deep text-[18px]">verified_user</span>
+</div>
+<div class="space-y-space-sm">
+<div class="p-2.5 bg-surface-container-lowest rounded-md">
+<div class="font-label-micro text-label-micro text-ink-faint uppercase font-semibold tracking-wider">Dominant Function</div>
+<div class="font-body-dense text-body-dense text-ink-primary font-medium mt-0.5">Upstream Feedstocks, Fermentation &amp; CDMO Scale</div>
+</div>
+<div class="p-2.5 bg-surface-container-lowest rounded-md">
+<div class="font-label-micro text-label-micro text-ink-faint uppercase font-semibold tracking-wider">Regulatory Oversight Matrix</div>
+<div class="font-body-dense text-body-dense text-ink-primary font-medium mt-0.5">NMPA (Domestic), US FDA Foreign Inspection, EMA OAI Compliance</div>
+</div>
+<div class="p-2.5 bg-surface-container-lowest rounded-md">
+<div class="font-label-micro text-label-micro text-ink-faint uppercase font-semibold tracking-wider">Primary Systemic Exposure</div>
+<div class="font-body-dense text-body-dense text-amber-risk font-medium mt-0.5">US BIOSECURE Act Exclusions &amp; Dual-Use Chemical Controls</div>
+</div>
+</div>
+<div class="pt-space-xs flex items-center justify-between font-label-meta text-label-meta text-ink-muted">
+<span>Global Pipeline Share: <strong class="text-navy-deep">30.5%</strong></span>
+<span>Bilateral Flow: <strong class="text-navy-deep">$38.4B</strong></span>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1080px] mx-auto px-margin pb-space-2xl w-full">
+<div class="bg-navy-deep text-on-navy-bright rounded-xl p-space-xl shadow-xl">
+<div class="flex items-center justify-between pb-space-lg">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-primary-fixed text-[20px]">analytics</span>
+<span class="font-label-section text-label-section uppercase tracking-widest text-on-navy-muted">Macro Production &amp; Registration Benchmarks</span>
+</div>
+<span class="font-label-meta text-label-meta text-on-navy-muted">Data Source: FDA DMF Filings / UN COMTRADE</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl">
+<div class="space-y-space-xs">
+<div class="font-metric-large text-metric-large text-on-navy-bright font-semibold">~20%</div>
+<div class="font-label-section text-label-section text-on-navy-muted uppercase tracking-wider">Global API Output</div>
+<p class="font-body-dense text-body-dense text-on-navy-muted text-[13px] leading-tight">Total finished active pharmaceutical ingredient volume globally, reaching 180+ sovereign jurisdictions.</p>
+</div>
+<div class="space-y-space-xs">
+<div class="font-metric-large text-metric-large text-primary-fixed font-semibold">45%</div>
+<div class="font-label-section text-label-section text-on-navy-muted uppercase tracking-wider">FDA Master Files</div>
+<p class="font-body-dense text-body-dense text-on-navy-muted text-[13px] leading-tight">Proportion of active US FDA Drug Master File (DMF) registrations held by mainland manufacturers.</p>
+</div>
+<div class="space-y-space-xs">
+<div class="font-metric-large text-metric-large text-on-navy-bright font-semibold">70–95%</div>
+<div class="font-label-section text-label-section text-on-navy-muted uppercase tracking-wider">Key Molecule Density</div>
+<p class="font-body-dense text-body-dense text-on-navy-muted text-[13px] leading-tight">Share in core generic chains: 70% paracetamol, 80%+ penicillins, up to 95% US/EU generic ibuprofen.</p>
+</div>
+<div class="space-y-space-xs">
+<div class="font-metric-large text-metric-large text-primary-fixed font-semibold">30.5%</div>
+<div class="font-label-section text-label-section text-on-navy-muted uppercase tracking-wider">Innovative Preclinical</div>
+<p class="font-body-dense text-body-dense text-on-navy-muted text-[13px] leading-tight">Global innovative drug pipeline origin, 2nd only to the US, rising sharply from 23% in 2023.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1080px] mx-auto px-margin pb-space-2xl w-full">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-sm mb-space-lg">
+<div>
+<span class="font-label-section text-label-section uppercase tracking-widest text-navy-soft">Upstream Distribution</span>
+<h2 class="font-headline-section text-headline-section text-navy-deep tracking-tight mt-1">Chemical Feedstock Outbound Flow</h2>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted max-w-md">Mapping where China's chemical synthesis, fermentation intermediates, and active molecules terminate across primary processing zones.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<div class="lg:col-span-7 bg-surface-panel p-space-xl rounded-xl shadow-sm space-y-space-lg flex flex-col justify-between">
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-card text-headline-card text-navy-deep">Export Routing by Receiving Territory</span>
+<span class="font-label-meta text-label-meta text-ink-muted">Annual Intermediate Metric Tons (est.)</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted">India acts as the primary conversion terminal, while Europe and the US ingest finished active substances and foundational precursor synthetics.</p>
+</div>
+<div class="space-y-space-md">
+<div class="space-y-1.5">
+<div class="flex justify-between font-body-dense text-body-dense">
+<span class="text-ink-primary font-medium">India (Formulation Hub / Generic Intermediates)</span>
+<span class="text-navy-deep font-semibold">~74% import reliance</span>
+</div>
+<div class="w-full h-3.5 bg-line-hairline rounded-full overflow-hidden">
+<div class="h-full bg-navy-deep rounded-full" style="width: 74%"></div>
+</div>
+<div class="flex justify-between font-label-micro text-label-micro text-ink-muted">
+<span>Feeds 90%+ of Penicillin-G &amp; 6-APA active fermentation pools</span>
+<span>482,000 Metric Tons</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between font-body-dense text-body-dense">
+<span class="text-ink-primary font-medium">European Union (Active Molecules &amp; Raw Intermediates)</span>
+<span class="text-navy-deep font-semibold">68% intermediate share</span>
+</div>
+<div class="w-full h-3.5 bg-line-hairline rounded-full overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 68%"></div>
+</div>
+<div class="flex justify-between font-label-micro text-label-micro text-ink-muted">
+<span>Up to 95% of generic analgesic and broad-spectrum antibiotic feedstocks</span>
+<span>314,000 Metric Tons</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between font-body-dense text-body-dense">
+<span class="text-ink-primary font-medium">United States (Direct Finished APIs &amp; KSMs)</span>
+<span class="text-navy-deep font-semibold">45% active DMF share</span>
+</div>
+<div class="w-full h-3.5 bg-line-hairline rounded-full overflow-hidden">
+<div class="h-full bg-surface-tint rounded-full" style="width: 45%"></div>
+</div>
+<div class="flex justify-between font-label-micro text-label-micro text-ink-muted">
+<span>Subject to ongoing Section 232 supply chain vulnerability audits</span>
+<span>218,000 Metric Tons</span>
+</div>
+</div>
+<div class="space-y-1.5">
+<div class="flex justify-between font-body-dense text-body-dense">
+<span class="text-ink-primary font-medium">Emerging Corridors (ASEAN / LATAM / MENA / Belt &amp; Road)</span>
+<span class="text-navy-deep font-semibold">$7.75B Bilateral Flow</span>
+</div>
+<div class="w-full h-3.5 bg-line-hairline rounded-full overflow-hidden">
+<div class="h-full bg-bar-secondary rounded-full" style="width: 38%"></div>
+</div>
+<div class="flex justify-between font-label-micro text-label-micro text-ink-muted">
+<span>Direct sovereign purchasing bypasses Western multi-tier intermediaries</span>
+<span>185,000 Metric Tons</span>
+</div>
+</div>
+</div>
+<div class="pt-space-sm flex items-center justify-between font-label-micro text-label-micro text-ink-muted">
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 bg-navy-deep rounded-sm"></span> High Dependency
+          </span>
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 bg-secondary rounded-sm"></span> Systemic Intermediate
+          </span>
+<span class="flex items-center gap-1">
+<span class="w-2.5 h-2.5 bg-bar-secondary rounded-sm"></span> Growing Bilateral
+          </span>
+</div>
+</div>
+<div class="lg:col-span-5 flex flex-col justify-between gap-space-md">
+<div class="bg-surface-panel p-space-lg rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-section text-label-section uppercase tracking-wider text-navy-deep">Upstream Dependency Metric</span>
+<span class="material-symbols-outlined text-navy-deep text-[18px]">account_tree</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-navy-deep">The Penicillin &amp; Fermentation Chokepoint</h3>
+<p class="font-body-dense text-body-dense text-ink-muted">
+            Global supply of amoxicillin, ampicillin, and cephalosporins relies on Chinese raw chemical synthesis. Without Chinese crude Penicillin-G and 6-APA inputs, secondary formulation lines in India and Europe encounter acute shortages within 45 to 60 days.
+          </p>
+<div class="p-3 bg-surface-container-high rounded-md flex items-center justify-between">
+<span class="font-label-meta text-label-meta text-ink-primary font-medium">Estimated global 6-APA capacity in China:</span>
+<span class="font-headline-card text-headline-card text-navy-deep font-semibold">88.4%</span>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-sm space-y-space-sm">
+<div class="flex items-center gap-space-xs text-amber-risk">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+<span class="font-label-section text-label-section uppercase tracking-wider font-semibold">Critical Vulnerability Radar</span>
+</div>
+<h4 class="font-body-dense text-body-dense font-medium text-ink-primary">KSM Sourcing Concentration</h4>
+<p class="font-body-dense text-body-dense text-ink-muted text-[13.5px]">
+            Key Starting Materials (KSMs) undergo early synthesis steps categorized as basic industrial chemicals, evading pharmaceutical inspection while creating single-point-of-failure bottlenecks.
+          </p>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1080px] mx-auto px-margin pb-space-2xl w-full">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+<div class="lg:col-span-6 space-y-space-md">
+<span class="font-label-section text-label-section uppercase tracking-widest text-navy-soft">Strategic Shift</span>
+<h2 class="font-headline-section text-headline-section text-navy-deep tracking-tight">The Value Chain Climb: Synthetic Small Molecules to Biologics &amp; ADCs</h2>
+<p class="font-body-reading text-body-reading text-ink-muted">
+          China is executing a coordinated transition up the value pyramid. Once confined to razor-margin bulk chemical syntheses, domestic drugmakers are leveraging world-class chemistry talent and state-subsidized bioreactor infrastructure to dominate antibody-drug conjugate (ADC) chemistry and cell therapies.
+        </p>
+<p class="font-body-dense text-body-dense text-ink-muted">
+          In 2024 alone, multinational pharmaceutical corporations transacted over $35 billion in out-licensing deal value to secure rights to early-stage Chinese oncology assets, marking an inversion where Western biopharma now licenses innovation discovered within Chinese labs.
+        </p>
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="p-space-sm bg-surface-panel rounded-md">
+<div class="font-headline-card text-headline-card text-navy-deep font-semibold">134</div>
+<div class="font-label-meta text-label-meta text-ink-muted mt-1">Cross-Border ADC Out-Licenses (2022–2025)</div>
+</div>
+<div class="p-space-sm bg-surface-panel rounded-md">
+<div class="font-headline-card text-headline-card text-navy-deep font-semibold">$38.2B</div>
+<div class="font-label-meta text-label-meta text-ink-muted mt-1">Total Upfront &amp; Milestone Commitment Value</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6">
+<div class="relative rounded-xl overflow-hidden shadow-lg">
+<img class="w-full h-80 object-cover" data-alt="High-tech automated biopharmaceutical bioreactor laboratory in Shanghai Zhangjiang Pharma Valley with stainless steel sterile tanks, clinical lighting, cleanroom environment, and precise digital instrumentation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCELvpZn5J19Qb57Epu0DHhr-sDGeDpDf3PdSCo9O2JQfpyLbwYfLoi4ec-rs4lUPZkIlRjkDPVq4EALsQbNs97Yadyf4tewOyVw6Nuxx0Jx7CVgKjBIDKgdrYjg5OIMGJ2EguF-yOQpGboUmiza9japHKSnr6i3PY-eaoNQllTy1Jc1yfrp02DrPI--jQO3KLZHLY-Rt3ndDvEitFnu1OjjVDCu1PKF3hjp7EJu3Jqampv90Aelu7mSw"/>
+<div class="p-space-lg bg-surface-panel space-y-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-section text-label-section uppercase tracking-wider text-navy-deep">Legislative Geopolitics</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-[999px] bg-error-container text-on-error-container font-label-micro text-label-micro font-medium">High Exposure</span>
+</div>
+<h4 class="font-headline-card text-headline-card text-navy-deep">BIOSECURE Act &amp; CDMO Re-Routing</h4>
+<p class="font-body-dense text-body-dense text-ink-muted text-[13.5px]">
+              Targeting designated entities including WuXi AppTec, WuXi Biologics, and Complete Genomics, US federal legislation requires American biopharma partners to phase out contract relationships by 2032. This has ignited bilateral negotiations to re-route high-throughput discovery to South Korean (Samsung Biologics), Indian (Aragen, Syngene), and Swiss (Lonza) operations.
+            </p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1080px] mx-auto px-margin pb-space-2xl w-full">
+<div class="mb-space-lg">
+<span class="font-label-section text-label-section uppercase tracking-widest text-navy-soft">Industrial Geography</span>
+<h2 class="font-headline-section text-headline-section text-navy-deep tracking-tight mt-1">Provincial Synthesis Hubs &amp; Corporate Champions</h2>
+<p class="font-body-dense text-body-dense text-ink-muted mt-1">Four core administrative zones produce the bulk of outbound chemical volume and high-titer recombinant biologics.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md mb-space-xl">
+<div class="bg-surface-panel p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro font-semibold text-navy-soft uppercase">Corridor Zone 01</span>
+<span class="material-symbols-outlined text-navy-deep text-[16px]">location_on</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-navy-deep">Jiangsu Province</h3>
+<p class="font-label-meta text-label-meta text-ink-muted font-medium">Suzhou BioBAY · Taixing · Lianyungang</p>
+<p class="font-body-dense text-body-dense text-ink-muted text-[13px] pt-space-xs">
+            Premier bioreactor fermentation, synthetic API clusters, and biopharma incubation. Houses the greatest density of FDA-approved biologic pilot plants.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-line-hairline flex items-center justify-between font-label-micro text-label-micro">
+<span class="text-ink-muted">Specialty</span>
+<span class="font-medium text-navy-deep">ADCs &amp; Biologics</span>
+</div>
+</div>
+<div class="bg-surface-panel p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro font-semibold text-navy-soft uppercase">Corridor Zone 02</span>
+<span class="material-symbols-outlined text-navy-deep text-[16px]">location_on</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-navy-deep">Zhejiang Province</h3>
+<p class="font-label-meta text-label-meta text-ink-muted font-medium">Taizhou · Linhai · Hangzhou Chemical Park</p>
+<p class="font-body-dense text-body-dense text-ink-muted text-[13px] pt-space-xs">
+            The world's densest concentration of chemical intermediates, active generic synthesis, and complex multi-step organic reaction pathways.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-line-hairline flex items-center justify-between font-label-micro text-label-micro">
+<span class="text-ink-muted">Specialty</span>
+<span class="font-medium text-navy-deep">Generic Small Molecule API</span>
+</div>
+</div>
+<div class="bg-surface-panel p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro font-semibold text-navy-soft uppercase">Corridor Zone 03</span>
+<span class="material-symbols-outlined text-navy-deep text-[16px]">location_on</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-navy-deep">Shanghai Hub</h3>
+<p class="font-label-meta text-label-meta text-ink-muted font-medium">Zhangjiang Pharma Valley · Lingang Free Trade</p>
+<p class="font-body-dense text-body-dense text-ink-muted text-[13px] pt-space-xs">
+            Commercial headquarters, international regulatory liaison teams, multinational joint R&amp;D campuses, and contract chemistry engines.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-line-hairline flex items-center justify-between font-label-micro text-label-micro">
+<span class="text-ink-muted">Specialty</span>
+<span class="font-medium text-navy-deep">Global Commercial &amp; CRO</span>
+</div>
+</div>
+<div class="bg-surface-panel p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div class="space-y-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-micro text-label-micro font-semibold text-navy-soft uppercase">Corridor Zone 04</span>
+<span class="material-symbols-outlined text-navy-deep text-[16px]">location_on</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-navy-deep">Shandong &amp; Hebei</h3>
+<p class="font-label-meta text-label-meta text-ink-muted font-medium">Zibo · Weihai · Shijiazhuang Corridor</p>
+<p class="font-body-dense text-body-dense text-ink-muted text-[13px] pt-space-xs">
+            Industrial scale active ingredients: ascorbic acid (Vitamin C), paracetamol, raw caffeine, and large-tonnage fermentation tanks.
+          </p>
+</div>
+<div class="pt-space-md mt-space-md border-t border-line-hairline flex items-center justify-between font-label-micro text-label-micro">
+<span class="text-ink-muted">Specialty</span>
+<span class="font-medium text-navy-deep">Bulk Commodity Chemistry</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<span class="font-headline-card text-headline-card text-navy-deep">Key Corporate Operators in the Corridor</span>
+<span class="font-label-meta text-label-meta text-ink-muted">Categorized by industrial focus &amp; regulatory export footprint</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+<div class="bg-surface-container-lowest p-space-md rounded-lg space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-section text-label-section uppercase text-navy-deep">API &amp; Intermediates</span>
+<span class="font-label-micro text-label-micro text-ink-faint">Bulk Tonnage</span>
+</div>
+<ul class="font-body-dense text-body-dense text-ink-muted space-y-1">
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">Zhejiang Huahai</strong><span>Cardiovascular API</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">Zhejiang NHU</strong><span>Vitamins &amp; Synthetics</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">Shenzhen Hepalink</strong><span>Heparin Sodium</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">CSPC Pharmaceutical</strong><span>Antibiotics / Caffeine</span></li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-section text-label-section uppercase text-navy-deep">CRO &amp; CDMO Powerhouses</span>
+<span class="font-label-micro text-label-micro text-amber-risk">BIOSECURE Watch</span>
+</div>
+<ul class="font-body-dense text-body-dense text-ink-muted space-y-1">
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">WuXi AppTec</strong><span>Discovery Chemistry</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">WuXi Biologics</strong><span>High-Titer CRDMO</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">Pharmaron Beijing</strong><span>Preclinical R&amp;D</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">Asymchem Labs</strong><span>Continuous Flow API</span></li>
+</ul>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-section text-label-section uppercase text-navy-deep">Innovative Biopharma</span>
+<span class="font-label-micro text-label-micro text-secondary font-medium">Cross-Border Pipeline</span>
+</div>
+<ul class="font-body-dense text-body-dense text-ink-muted space-y-1">
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">BeiGene (BeOne)</strong><span>BTK / Immuno-Oncology</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">Innovent Biologics</strong><span>Monoclonals / GLP-1</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">Hengrui Medicine</strong><span>ADC Innovations</span></li>
+<li class="flex items-center justify-between"><strong class="text-ink-primary font-medium">Legend Biotech</strong><span>CAR-T Cell Therapy</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-[1080px] mx-auto px-margin pb-space-2xl w-full">
+<div class="flex items-center justify-between mb-space-md">
+<div>
+<span class="font-label-section text-label-section uppercase tracking-widest text-navy-soft">Structural Assessment</span>
+<h2 class="font-headline-section text-headline-section text-navy-deep tracking-tight mt-1">Systemic Corridor Profile Ledger</h2>
+</div>
+<span class="font-label-meta text-label-meta text-ink-muted">Updated: Q1 2025</span>
+</div>
+<div class="w-full overflow-x-auto bg-surface-panel rounded-xl shadow-sm">
+<table class="w-full text-left font-body-dense text-body-dense border-collapse">
+<thead class="bg-surface-container-high text-navy-deep font-label-section text-label-section uppercase tracking-wider">
+<tr>
+<th class="py-3 px-4">Analytical Dimension</th>
+<th class="py-3 px-4">Observed Status &amp; Quantification</th>
+<th class="py-3 px-4">Systemic Corridor Implication</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-line-hairline text-ink-primary">
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3.5 px-4 font-medium text-navy-deep">Strategic Position</td>
+<td class="py-3.5 px-4">Unmatched upstream chemical synthesis volume; ~20% of global finished active ingredients.</td>
+<td class="py-3.5 px-4 text-ink-muted">Foundational base for all secondary formulation corridors worldwide.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3.5 px-4 font-medium text-navy-deep">Outbound Material Flows</td>
+<td class="py-3.5 px-4">Key Starting Materials (KSMs), fine chemicals, active fermentation intermediates, ADCs.</td>
+<td class="py-3.5 px-4 text-ink-muted">Critical chokepoints in penicillins, paracetamol, heparin, and oncology intermediates.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3.5 px-4 font-medium text-navy-deep">Inbound Material Flows</td>
+<td class="py-3.5 px-4">High-end specialized bioprocessing resin, single-use bioreactor assemblies, foreign patents.</td>
+<td class="py-3.5 px-4 text-ink-muted">Vulnerable to specialized chromatography resin and fluid handling import restrictions.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3.5 px-4 font-medium text-navy-deep">Dominant Recipient Corridors</td>
+<td class="py-3.5 px-4">India (74% import reliance), EU member states (68%), United States (45% DMFs).</td>
+<td class="py-3.5 px-4 text-ink-muted">Western pharmaceutical resilience strategies depend entirely on third-party conversion in India.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3.5 px-4 font-medium text-navy-deep">Innovative Expansion</td>
+<td class="py-3.5 px-4">30.5% share of global preclinical assets; surging antibody-drug conjugate (ADC) dominance.</td>
+<td class="py-3.5 px-4 text-ink-muted">Rapidly closing therapeutic innovation lead with US biotech hubs despite venture contraction.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3.5 px-4 font-medium text-navy-deep">Regulatory Gateways</td>
+<td class="py-3.5 px-4">NMPA Division of Drug Registration; US FDA China Office; EMA GMP Mutual Audits.</td>
+<td class="py-3.5 px-4 text-ink-muted">Inspection backlogs and unannounced overseas verification requirements increasing latency.</td>
+</tr>
+<tr class="hover:bg-surface-container-lowest transition-colors">
+<td class="py-3.5 px-4 font-medium text-navy-deep">Decoupling &amp; Trade Risks</td>
+<td class="py-3.5 px-4">US BIOSECURE Act; Proposed Section 301 API tariffs; Dual-use export control expansion.</td>
+<td class="py-3.5 px-4 text-amber-risk font-medium">Bifurcation of global clinical supply contracts; dual-track supply chains emerging.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<section class="max-w-[1080px] mx-auto px-margin pb-space-2xl w-full">
+<div class="flex items-center justify-between mb-space-lg">
+<div>
+<span class="font-label-section text-label-section uppercase tracking-widest text-navy-soft">Intelligence Stream</span>
+<h2 class="font-headline-section text-headline-section text-navy-deep tracking-tight mt-1">Latest from the China Corridor</h2>
+</div>
+<a class="font-body-dense text-body-dense text-navy-deep font-semibold hover:underline flex items-center gap-1" href="#">
+<span>View all China filings</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<article class="bg-surface-panel rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="space-y-space-sm p-space-lg">
+<div class="flex items-center justify-between font-label-micro text-label-micro text-ink-muted">
+<span class="text-navy-deep font-semibold uppercase tracking-wider">Regulatory Wire</span>
+<span>24 Feb 2025</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-navy-deep group-hover:text-navy-soft transition-colors">
+            US FDA Post-Pandemic Inspection Cadence Resumes in Zhejiang Chemical Zone
+          </h3>
+<p class="font-body-dense text-body-dense text-ink-muted line-clamp-3">
+            Federal field investigators initiate comprehensive cGMP audits across 18 Taizhou active substance synthesis centers, targeting precursor integrity controls and electronic batch verification standards.
+          </p>
+</div>
+<div class="p-space-lg pt-0 flex items-center justify-between font-label-meta text-label-meta text-ink-muted">
+<span>By Elena Rostova</span>
+<span class="text-navy-deep font-medium group-hover:translate-x-1 transition-transform">Read report →</span>
+</div>
+</article>
+<article class="bg-surface-panel rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="space-y-space-sm p-space-lg">
+<div class="flex items-center justify-between font-label-micro text-label-micro text-ink-muted">
+<span class="text-navy-deep font-semibold uppercase tracking-wider">Contract Logistics</span>
+<span>19 Feb 2025</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-navy-deep group-hover:text-navy-soft transition-colors">
+            European Drug Agencies Model Severe Shortages Under Potential Chinese KSM Export Caps
+          </h3>
+<p class="font-body-dense text-body-dense text-ink-muted line-clamp-3">
+            An internal EMA risk assessment warns that non-tariff restrictions on Key Starting Materials for cardiovascular active substances would create stockouts in 21 EU member states within 90 days.
+          </p>
+</div>
+<div class="p-space-lg pt-0 flex items-center justify-between font-label-meta text-label-meta text-ink-muted">
+<span>By Arthur Vance</span>
+<span class="text-navy-deep font-medium group-hover:translate-x-1 transition-transform">Read report →</span>
+</div>
+</article>
+<article class="bg-surface-panel rounded-xl overflow-hidden shadow-sm flex flex-col justify-between group hover:shadow-md transition-shadow">
+<div class="space-y-space-sm p-space-lg">
+<div class="flex items-center justify-between font-label-micro text-label-micro text-ink-muted">
+<span class="text-navy-deep font-semibold uppercase tracking-wider">M&amp;A &amp; Licensing</span>
+<span>12 Feb 2025</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-navy-deep group-hover:text-navy-soft transition-colors">
+            Swiss Pharma Major Strikes $1.8B Global Rights Deal for Suzhou-Synthesized Bispecific
+          </h3>
+<p class="font-body-dense text-body-dense text-ink-muted line-clamp-3">
+            The deal underscores Western commercial biopharma reliance on Chinese discovery programs, maintaining strategic momentum even as political friction targets raw manufacturing capacity.
+          </p>
+</div>
+<div class="p-space-lg pt-0 flex items-center justify-between font-label-meta text-label-meta text-ink-muted">
+<span>By Lin Chen</span>
+<span class="text-navy-deep font-medium group-hover:translate-x-1 transition-transform">Read report →</span>
+</div>
+</article>
+</div>
+</section>
+<section class="max-w-[1080px] mx-auto px-margin pb-space-3xl w-full">
+<div class="bg-surface-container-high rounded-xl p-space-lg shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="space-y-1">
+<div class="flex items-center gap-space-xs text-navy-deep">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span class="font-label-section text-label-section uppercase tracking-wider font-semibold">Verification Ledger &amp; Source Methodology</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted text-[13px] max-w-2xl">
+            Corridor flow calculations are synthesized from customs manifests monitored by the China Chamber of Commerce for Import &amp; Export of Medicines (CCCMHPIE), the US FDA Drug Master File database, NMPA Centre for Drug Evaluation declarations, and bilateral trade accounts via UN COMTRADE Harmonized System (HS) Code 29 and 30 categories.
+          </p>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-4 py-2 bg-navy-deep text-on-navy-bright rounded-[999px] font-label-section text-label-section tracking-wide hover:bg-navy-soft transition-colors shadow-sm" type="button">
+            Download Corridor Dataset (CSV)
+          </button>
+</div>
+</div>
+</div>
+</section>
+</div></main><footer class="w-full bg-navy-deep text-on-navy-bright border-t border-navy-soft"><div class="max-w-[1080px] mx-auto px-margin py-space-2xl"><div class="flex flex-col md:flex-row md:items-start justify-between gap-space-xl pb-space-xl border-b border-navy-soft/60"><div class="space-y-space-sm"><div class="flex items-center gap-space-sm"><svg class="w-6 h-6 shrink-0" fill="none" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="24" rx="1" stroke="#FFFFFF" stroke-width="1.75" width="24" x="2" y="2"></rect><path d="M8 7H14.5C17.5 7 19.5 8.7 19.5 11.5C19.5 14.3 17.5 16 14.5 16H8V7Z" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="1.75"></path><path d="M14 16L20 22" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.75"></path><circle cx="14.5" cy="11.5" fill="#FFFFFF" r="1.25"></circle></svg><span class="font-headline-card text-headline-card font-medium tracking-tight text-on-navy-bright">Pharma Corridor</span></div><p class="font-body-dense text-body-dense text-on-navy-muted max-w-sm">Authoritative biopharmaceutical intelligence, trade corridor flows, and clinical cross-border regulatory analysis.</p></div><nav class="flex flex-wrap items-center gap-x-space-lg gap-y-space-sm"><a class="font-body-dense text-body-dense text-on-navy-muted hover:text-on-navy-bright transition-colors" data-path="mission" href="#">About</a><a class="font-body-dense text-body-dense text-on-navy-muted hover:text-on-navy-bright transition-colors" data-path="editorial-standards" href="#">Editorial standards</a><a class="font-body-dense text-body-dense text-on-navy-muted hover:text-on-navy-bright transition-colors" data-path="contribute" href="#">Contribute</a><a class="font-body-dense text-body-dense text-on-navy-muted hover:text-on-navy-bright transition-colors" data-path="corrections" href="#">Corrections</a></nav></div><div class="pt-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm font-label-micro text-label-micro text-on-navy-muted tracking-wider"><p>Pharma Corridor · pharmacorridor.com · intelligence prototype</p><p class="text-on-navy-muted/80">© 2025 Global Pharmaceutical Intelligence Group. All rights reserved.</p></div></div></footer></body></html>
