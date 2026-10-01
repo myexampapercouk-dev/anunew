@@ -4,7 +4,8 @@
    container, so the page would not scroll. Only the root element clips horizontal
    overflow now, and the mobile-menu scroll lock targets <html>.
 2. Shows scrollbars again (the Stitch screens hid them).
-3. Adds "Corrections" to the desktop About dropdown; About stays a single page.
+3. About: removes the sticky jump bar and adds "Corrections" to the desktop About
+   dropdown; About stays a single page.
 4. Adds page titles, then builds the inner pages (tools/inner_pages.py).
 """
 import re, pathlib, sys
@@ -26,6 +27,9 @@ def common_fixes(html):
     html = html.replace("document.body.style.overflow = open ? 'hidden' : '';",
                         "document.documentElement.style.overflow = open ? 'hidden' : '';")
     html = html.replace("::-webkit-scrollbar{display:none;}", "")
+    # About: drop the sticky "01. Mission ... AUDIT GRADE" jump bar under the header
+    html = re.sub(r'<!-- Interactive Jump Anchor System -->\s*<div class="sticky top-16.*?</div>\s*</div>\s*</div>\s*(?=<div class="max-w-\[1080px\] mx-auto px-margin w-full)',
+                  "", html, count=1, flags=re.S)
     if 'data-path="corrections"' not in html:
         m = re.search(r'(<a class="([^"]*)" data-path="contribute" href="about.html#contribute">Contribute</a>)', html)
         if m:
