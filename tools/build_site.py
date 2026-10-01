@@ -78,3 +78,69 @@ for name in pages.values():
     assert n == 1, name
     f.write_text(html, encoding="utf-8")
 print("footers replaced")
+
+# --- Mobile: hamburger menu + small-screen type and spacing ---
+RESPONSIVE_CSS = """<style id="responsive-overrides">
+@media (max-width: 639px) {
+  .px-margin { padding-left: 1rem !important; padding-right: 1rem !important; }
+  .text-display-hero { font-size: 38px !important; line-height: 42px !important; }
+  .text-headline-lead { font-size: 34px !important; line-height: 38px !important; }
+  .text-headline-section { font-size: 24px !important; line-height: 30px !important; }
+  .text-headline-card { font-size: 20px !important; line-height: 26px !important; }
+  .text-metric-large { font-size: 26px !important; line-height: 30px !important; }
+  .text-body-lead { font-size: 18px !important; line-height: 28px !important; }
+  .text-body-reading { font-size: 17px !important; line-height: 28px !important; }
+  h1, h2, h3 { overflow-wrap: anywhere; }
+}
+html, body { overflow-x: hidden; }
+img, svg, video { max-width: 100%; }
+#mobile-menu a { -webkit-tap-highlight-color: transparent; }
+</style>"""
+
+MENU_JS = """<script>
+(function () {
+  var btn = document.getElementById('mobile-menu-btn'), menu = document.getElementById('mobile-menu');
+  if (!btn || !menu) return;
+  function set(open) {
+    menu.classList.toggle('hidden', !open);
+    btn.setAttribute('aria-expanded', open);
+    btn.querySelector('span').textContent = open ? 'close' : 'menu';
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+  btn.addEventListener('click', function () { set(menu.classList.contains('hidden')); });
+  menu.addEventListener('click', function (e) { if (e.target.closest('a')) set(false); });
+  window.addEventListener('resize', function () { if (window.innerWidth >= 768) set(false); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') set(false); });
+})();
+</script>"""
+
+MENU_BTN = '<button id="mobile-menu-btn" class="md:hidden w-10 h-10 -mr-2 flex items-center justify-center rounded-full text-navy-deep hover:bg-surface-panel transition-colors" type="button" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false"><span class="material-symbols-outlined text-[24px]">menu</span></button>'
+
+def mobile_menu(current):
+    groups = ""
+    for title, links in COLUMNS:
+        items = ""
+        for label, href in links:
+            here = href == current
+            cls = "text-navy-deep font-semibold bg-surface-panel" if here else "text-ink-primary hover:bg-surface-panel"
+            aria = ' aria-current="page"' if here else ""
+            items += f'<a class="flex items-center justify-between px-3 py-3 rounded-lg font-body-dense text-[16px] {cls} transition-colors" href="{href}"{aria}><span>{label}</span><span class="material-symbols-outlined text-[18px] text-ink-faint">chevron_right</span></a>'
+        groups += f'<div class="py-space-md border-b border-line-hairline last:border-0"><p class="px-3 pb-2 font-label-section text-label-section uppercase tracking-wider text-ink-faint">{title}</p>{items}</div>'
+    return (f'<div id="mobile-menu" class="hidden md:hidden border-t border-line-hairline bg-bg-canvas h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain">'
+            f'<nav class="max-w-[1080px] mx-auto px-margin pb-space-xl" aria-label="Mobile">{groups}'
+            f'<a class="mt-space-md flex items-center justify-center gap-1 w-full py-3 rounded-[999px] bg-navy-deep text-on-navy-bright font-label-section text-label-section" href="briefing.html">Get The Briefing <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a></nav></div>')
+
+for name in pages.values():
+    f = out/name
+    html = f.read_text(encoding="utf-8")
+    m = re.search(r'<header class="fixed.*?</header>', html, re.S)
+    assert m, name
+    head = m.group(0)
+    # hamburger goes after the avatar, inside the right-hand group; the panel drops below the bar
+    assert head.endswith("</div></div></header>"), name
+    head = head[:-len("</div></div></header>")] + MENU_BTN + "</div></div>" + mobile_menu(name) + "</header>"
+    html = html[:m.start()] + head + html[m.end():]
+    html = html.replace("</head>", RESPONSIVE_CSS + "</head>", 1)
+    html = html.replace("</body>", MENU_JS + "</body>", 1)
+    f.write_text(html, encoding="utf-8")
+print("mobile menu added")
