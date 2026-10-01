@@ -16,8 +16,8 @@ paths = {
  "latest": "index.html", "analysis": "analysis.html",
  "corridors-india": "india.html", "corridors-united-states": "united-states.html",
  "corridors-europe": "europe.html", "corridors-china": "china.html",
- # no MENA / Rest of World screens were designed yet
- "corridors-mena": "index.html#corridors", "corridors-rest-of-world": "index.html#corridors",
+ # no Rest of World screen was designed yet (MENA page is built by post_build.py)
+ "corridors-mena": "mena.html", "corridors-rest-of-world": "index.html#corridors",
  "mission": "about.html#mission", "editorial-standards": "about.html#standards",
  "contribute": "about.html#contribute", "corrections": "about.html#corrections",
  "the-briefing": "briefing.html",
@@ -30,7 +30,7 @@ text_rules = [
  (r"all analysis|read (the )?(full )?analysis", "analysis.html"),
  (r"explore india", "india.html"), (r"explore us|explore united states", "united-states.html"),
  (r"explore europe", "europe.html"), (r"explore china", "china.html"),
- (r"explore (mena|global)", "index.html#corridors"),
+ (r"explore mena", "mena.html"), (r"explore global", "index.html#corridors"),
  (r"briefing|subscribe", "briefing.html"),
 ]
 def fix(m):
@@ -57,7 +57,7 @@ for folder, name in pages.items():
 LOGO = '<svg class="w-6 h-6 shrink-0" fill="none" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="24" rx="1" stroke="#FFFFFF" stroke-width="1.75" width="24" x="2" y="2"></rect><path d="M8 7H14.5C17.5 7 19.5 8.7 19.5 11.5C19.5 14.3 17.5 16 14.5 16H8V7Z" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="1.75"></path><path d="M14 16L20 22" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.75"></path><circle cx="14.5" cy="11.5" fill="#FFFFFF" r="1.25"></circle></svg>'
 COLUMNS = [
  ("Coverage", [("Latest", "index.html"), ("Analysis", "analysis.html"), ("Live Industry Tracker", "tracker.html"), ("The Briefing", "briefing.html")]),
- ("Corridors", [("India", "india.html"), ("United States", "united-states.html"), ("Europe", "europe.html"), ("China", "china.html"), ("MENA", "index.html#corridors"), ("Rest of World", "index.html#corridors")]),
+ ("Corridors", [("India", "india.html"), ("United States", "united-states.html"), ("Europe", "europe.html"), ("China", "china.html"), ("MENA", "mena.html"), ("Rest of World", "index.html#corridors")]),
  ("About", [("Mission", "about.html#mission"), ("Editorial Standards", "about.html#standards"), ("Contribute", "about.html#contribute"), ("Corrections", "about.html#corrections")]),
 ]
 def footer(current):
@@ -144,3 +144,7 @@ for name in pages.values():
     html = html.replace("</body>", MENU_JS + "</body>", 1)
     f.write_text(html, encoding="utf-8")
 print("mobile menu added")
+
+# --- Scroll fix, remove "Latest", split About into separate pages ---
+import runpy
+runpy.run_path(str(pathlib.Path(__file__).with_name("post_build.py")), run_name="__main__")
