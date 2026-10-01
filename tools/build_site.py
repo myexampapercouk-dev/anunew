@@ -12,7 +12,7 @@ pages = {
  "pharma_corridor_editorial_standards_mission": "about.html",
 }
 paths = {
- "latest": "index.html", "analysis": "analysis.html",
+ "latest": "latest.html", "analysis": "analysis.html",
  "corridors-india": "india.html", "corridors-united-states": "united-states.html",
  "corridors-europe": "europe.html", "corridors-china": "china.html",
  # MENA and Rest of World pages are built by post_build.py / inner_pages.py
@@ -37,6 +37,8 @@ def fix(m):
     if 'href="#"' not in attrs: return m.group(0)
     dp = re.search(r'data-path="([^"]+)"', attrs)
     target = paths.get(dp.group(1)) if dp else None
+    if target == "latest.html" and "<svg" in inner:  # the header logo goes home, not to Latest
+        target = "index.html"
     if not target:
         text = re.sub(r"<[^>]+>", " ", inner)
         text = re.sub(r"\b(arrow_forward|expand_more|east)\b", "", text)
@@ -56,7 +58,7 @@ for folder, name in pages.items():
 # --- Sitemap footer, shared by every page ---
 LOGO = '<svg class="w-6 h-6 shrink-0" fill="none" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="24" rx="1" stroke="#FFFFFF" stroke-width="1.75" width="24" x="2" y="2"></rect><path d="M8 7H14.5C17.5 7 19.5 8.7 19.5 11.5C19.5 14.3 17.5 16 14.5 16H8V7Z" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="1.75"></path><path d="M14 16L20 22" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.75"></path><circle cx="14.5" cy="11.5" fill="#FFFFFF" r="1.25"></circle></svg>'
 COLUMNS = [
- ("Coverage", [("Latest", "index.html"), ("Analysis", "analysis.html"), ("Live Industry Tracker", "tracker.html"), ("The Briefing", "index.html#briefing")]),
+ ("Coverage", [("Latest", "latest.html"), ("Analysis", "analysis.html"), ("Live Industry Tracker", "tracker.html"), ("The Briefing", "index.html#briefing")]),
  ("Corridors", [("India", "india.html"), ("United States", "united-states.html"), ("Europe", "europe.html"), ("China", "china.html"), ("MENA", "mena.html"), ("Rest of World", "rest-of-world.html")]),
  ("About", [("Mission", "about.html#mission"), ("Editorial Standards", "about.html#standards"), ("Contribute", "about.html#contribute"), ("Corrections", "about.html#corrections")]),
 ]

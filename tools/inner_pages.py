@@ -187,9 +187,49 @@ def corridor_main(name):
 <div class="p-space-lg bg-surface-panel rounded-xl font-label-meta text-label-meta text-ink-muted leading-relaxed"><span class="flex items-center gap-2 mb-2 text-navy-deep font-label-section text-label-section uppercase tracking-wider font-semibold"><span class="material-symbols-outlined text-[18px]">verified</span>Sources</span>{e(ROW["sources"])}</div>
 </div></main>'''
 
+# ---------------------------------------------------------------- Latest (the source site's tracker view)
+def latest_main():
+    chip = "beat-chip px-3.5 py-1.5 rounded-full font-label-section text-label-section transition-colors whitespace-nowrap"
+    chips = f'<button class="{chip} bg-navy-deep text-on-navy-bright" data-beat="" type="button">All</button>' + "".join(
+        f'<button class="{chip} bg-surface-container text-ink-muted hover:text-navy-deep" data-beat="{e(b)}" type="button">{e(b)}</button>' for b in BEATS)
+    rows = "".join(
+        f'<div class="analysis-row grid grid-cols-[56px_1fr] sm:grid-cols-[72px_1fr] gap-space-md py-space-md border-b border-line-hairline" data-beat="{e(n["beat"])}">'
+        f'<span class="font-label-meta text-label-meta text-ink-faint tabular-nums pt-0.5">{e(n["date"])}</span>'
+        f'<div><div class="font-headline-row text-headline-row text-ink-primary">{e(n["head"])}</div>'
+        f'<div class="font-label-meta text-label-meta text-ink-faint mt-1">{e(n["source"])} · {e(n["beat"])} · '
+        + " · ".join(f'<a class="hover:text-navy-deep" href="{CORRIDOR_PAGE[c]}">{e(c)}</a>' for c in n["corridors"]) + '</div></div></div>'
+        for n in NEWS)
+    return f'''<main class="w-full pt-16 bg-bg-canvas"><div class="max-w-[1080px] w-full mx-auto px-margin py-space-xl flex flex-col gap-space-xl">
+<div class="flex flex-col gap-space-md">{crumb(("Home", "index.html"), ("Latest", None))}
+<h1 class="font-headline-lead text-headline-lead text-navy-deep tracking-tight">Industry Tracker</h1>
+<p class="font-body-lead text-body-lead text-ink-muted max-w-[60ch]">The corridor's daily wire, selected from 300-400 sources worldwide. We track everything; we publish what matters, and every item is tagged, so it flows to its corridor and beat automatically.</p>
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1">{chips}</div></div>
+<div class="flex flex-col"><div id="analysis-list">{rows}</div>
+<p class="pt-space-lg font-label-meta text-label-meta text-ink-faint">Showing <span id="analysis-count"></span>, drawn from a much wider feed we filter down before it reaches the page.</p>
+<p id="analysis-empty" class="hidden py-space-xl font-body-dense text-body-dense text-ink-muted">Nothing on this beat yet.</p></div>
+</div>
+<script>
+(function () {{
+  var chips = document.querySelectorAll('.beat-chip'), rows = document.querySelectorAll('.analysis-row');
+  function show(beat) {{
+    var n = 0;
+    rows.forEach(function (r) {{ var on = !beat || r.dataset.beat === beat; r.classList.toggle('hidden', !on); if (on) n++; }});
+    chips.forEach(function (c) {{
+      var on = c.dataset.beat === beat;
+      c.classList.toggle('bg-navy-deep', on); c.classList.toggle('text-on-navy-bright', on);
+      c.classList.toggle('bg-surface-container', !on); c.classList.toggle('text-ink-muted', !on);
+    }});
+    document.getElementById('analysis-count').textContent = n + (n === 1 ? ' item' : ' items');
+    document.getElementById('analysis-empty').classList.toggle('hidden', n > 0);
+  }}
+  chips.forEach(function (c) {{ c.addEventListener('click', function () {{ show(c.dataset.beat); }}); }});
+  show('');
+}})();
+</script></main>'''
+
 # ---------------------------------------------------------------- 404
 def not_found_main():
-    links = [("Latest", "index.html", "home"), ("Analysis", "analysis.html", "article"),
+    links = [("Latest", "latest.html", "home"), ("Analysis", "analysis.html", "article"),
              ("Live Industry Tracker", "tracker.html", "monitoring"), ("Corridors", "index.html#corridors", "public")]
     cards = "".join(
         f'<a class="flex items-center gap-space-md p-space-lg rounded-xl bg-surface-panel hover:bg-surface-variant transition-colors group" href="{h}">'
@@ -206,7 +246,7 @@ def not_found_main():
 </div></main>'''
 
 # ---------------------------------------------------------------- links into the new pages
-GENERATED = {"analysis.html", "mena.html", "rest-of-world.html", "404.html"}
+GENERATED = {"latest.html", "analysis.html", "mena.html", "rest-of-world.html", "404.html"}
 
 def link_headlines(html):
     """Make article headlines on existing pages (home lead, latest-analysis rows) open the article."""
@@ -222,6 +262,7 @@ def main():
     write_page("analysis.html", "Analysis", listing_main())
     write_page("rest-of-world.html", "Rest of World Corridor", corridor_main("Rest of World"))
     write_page("mena.html", "MENA Corridor", corridor_main("MENA"))
+    write_page("latest.html", "Latest", latest_main())
     write_page("404.html", "Page not found", not_found_main(), root_links=True)
     for f in SITE.glob("*.html"):
         # generated pages already link their headlines; wrapping again would nest <a> tags
