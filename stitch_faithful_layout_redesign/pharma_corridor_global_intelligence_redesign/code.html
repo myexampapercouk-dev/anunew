@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_standard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "outline-variant": "#c4c6d0", "line-subtle": "#D3D8E1", "background": "#f9f9ff", "on-tertiary": "#ffffff", "on-primary-fixed": "#001b3d", "primary-fixed": "#d6e3ff", "surface-variant": "#dee2ee", "surface-panel": "#F5F7FB", "on-primary-container": "#7992c0", "secondary-fixed": "#d7e2ff", "surface": "#f9f9ff", "error": "#ba1a1a", "inverse-primary": "#aec7f8", "surface-bright": "#f9f9ff", "on-background": "#171c24", "bar-secondary": "#C3CEE0", "surface-dim": "#d6dae5", "on-surface": "#171c24", "tertiary-fixed": "#dfe3ea", "ink-muted": "#5B6472", "on-navy-muted": "#A9B6D0", "inverse-surface": "#2c3139", "primary-fixed-dim": "#aec7f8", "on-surface-variant": "#44474e", "ink-primary": "#151A22", "on-secondary-fixed": "#001b3f", "tertiary": "#12171b", "on-tertiary-container": "#8d9298", "surface-container-lowest": "#ffffff", "tertiary-container": "#262b30", "amber-risk": "#B07515", "inverse-on-surface": "#edf1fc", "surface-container-high": "#e4e8f4", "error-container": "#ffdad6", "on-primary-fixed-variant": "#2d4770", "outline": "#74777f", "surface-tint": "#455f8a", "on-error": "#ffffff", "tertiary-fixed-dim": "#c2c7cd", "secondary-container": "#a3c1fe", "on-secondary-container": "#2f4e83", "secondary-fixed-dim": "#abc7ff", "surface-container-low": "#eff3ff", "navy-deep": "#0B2A52", "primary": "#001533", "on-secondary": "#ffffff", "secondary": "#3f5e94", "surface-container-highest": "#dee2ee", "on-tertiary-fixed-variant": "#42474d", "primary-container": "#0b2a52", "navy-soft": "#1C3E72", "on-navy-bright": "#FFFFFF", "on-secondary-fixed-variant": "#26467b", "on-primary": "#ffffff", "line-hairline": "#E7E9EF", "on-error-container": "#93000a", "on-tertiary-fixed": "#171c21", "ink-faint": "#949AA6", "surface-container": "#eaeef9", "bg-canvas": "#FFFFFF" }, "borderRadius": { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, "spacing": { "space-xl": "2.25rem", "gutter": "1.75rem", "space-md": "1rem", "margin": "2rem", "space-xs": "0.25rem", "space-lg": "1.5rem", "space-sm": "0.5rem", "space-2xl": "3.5rem", "space-3xl": "4rem" }, "fontFamily": { "body-reading": [ "Hanken Grotesk" ], "headline-section": [ "Hanken Grotesk" ], "display-hero-mobile": [ "Hanken Grotesk" ], "headline-card": [ "Hanken Grotesk" ], "label-meta": [ "Hanken Grotesk" ], "headline-row": [ "Hanken Grotesk" ], "headline-lead-mobile": [ "Hanken Grotesk" ], "headline-lead": [ "Hanken Grotesk" ], "label-micro": [ "Hanken Grotesk" ], "metric-large": [ "Hanken Grotesk" ], "body-lead": [ "Hanken Grotesk" ], "label-section": [ "Hanken Grotesk" ], "display-hero": [ "Hanken Grotesk" ], "body-dense": [ "Hanken Grotesk" ] }, "fontSize": { "body-reading": [ "18px", { "lineHeight": "30px", "letterSpacing": "-0.003em", "fontWeight": "400" } ], "headline-section": [ "28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "450" } ], "display-hero-mobile": [ "36px", { "lineHeight": "40px", "letterSpacing": "-0.025em", "fontWeight": "400" } ], "headline-card": [ "22px", { "lineHeight": "28px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "label-meta": [ "12.5px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-row": [ "19px", { "lineHeight": "24px", "letterSpacing": "-0.015em", "fontWeight": "450" } ], "headline-lead-mobile": [ "32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "400" } ], "headline-lead": [ "52px", { "lineHeight": "54px", "letterSpacing": "-0.025em", "fontWeight": "400" } ], "label-micro": [ "11px", { "lineHeight": "16px", "letterSpacing": "0em", "fontWeight": "400" } ], "metric-large": [ "32px", { "lineHeight": "32px", "letterSpacing": "-0.02em", "fontWeight": "500" } ], "body-lead": [ "20px", { "lineHeight": "30px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-section": [ "12.5px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "display-hero": [ "66px", { "lineHeight": "68px", "letterSpacing": "-0.03em", "fontWeight": "400" } ], "body-dense": [ "14.5px", { "lineHeight": "22px", "letterSpacing": "-0.006em", "fontWeight": "400" } ] } } } };</script></head><body class="bg-bg-canvas font-body-reading text-ink-primary min-h-screen selection:bg-primary-fixed selection:text-on-primary-fixed"><header class="fixed top-0 left-0 right-0 z-50 bg-bg-canvas/90 backdrop-blur-md border-b border-line-hairline"><div class="max-w-[1080px] mx-auto px-margin h-16 flex items-center justify-between"><div class="flex items-center gap-space-xl"><a class="flex items-center gap-space-sm group focus:outline-none focus:ring-1 focus:ring-navy-deep" data-path="latest" href="#"><svg class="w-6 h-6 shrink-0" fill="none" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="24" rx="1" stroke="#0B2A52" stroke-width="1.75" width="24" x="2" y="2"></rect><path d="M8 7H14.5C17.5 7 19.5 8.7 19.5 11.5C19.5 14.3 17.5 16 14.5 16H8V7Z" stroke="#0B2A52" stroke-linejoin="round" stroke-width="1.75"></path><path d="M14 16L20 22" stroke="#0B2A52" stroke-linecap="round" stroke-width="1.75"></path><circle cx="14.5" cy="11.5" fill="#0B2A52" r="1.25"></circle></svg><span class="font-headline-card text-headline-card tracking-tight font-medium text-navy-deep">Pharma Corridor</span></a><nav class="hidden md:flex items-center gap-space-lg" data-active-classes="text-navy-deep font-semibold border-b-2 border-navy-deep pb-0.5"><a aria-current="page" class="transition-colors text-navy-deep font-semibold border-b-2 border-navy-deep pb-0.5" data-path="latest" href="#">Latest</a><a class="font-body-dense text-body-dense text-ink-muted hover:text-navy-deep transition-colors" data-path="analysis" href="#">Analysis</a><div class="relative group py-2"><button class="font-body-dense text-body-dense text-ink-muted hover:text-navy-deep transition-colors flex items-center gap-1 focus:outline-none" type="button"><span>Corridors</span><span class="material-symbols-outlined text-[16px] text-ink-faint transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50 w-52"><div class="bg-bg-canvas border border-line-hairline rounded-none shadow-[0_12px_34px_rgba(16,38,69,0.12)] py-2"><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-india" href="#">India</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-united-states" href="#">United States</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-europe" href="#">Europe</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-china" href="#">China</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-mena" href="#">MENA</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="corridors-rest-of-world" href="#">Rest of World</a></div></div></div><div class="relative group py-2"><button class="font-body-dense text-body-dense text-ink-muted hover:text-navy-deep transition-colors flex items-center gap-1 focus:outline-none" type="button"><span>About</span><span class="material-symbols-outlined text-[16px] text-ink-faint transition-transform group-hover:rotate-180">expand_more</span></button><div class="absolute left-0 top-full pt-1 hidden group-hover:block z-50 w-48"><div class="bg-bg-canvas border border-line-hairline rounded-none shadow-[0_12px_34px_rgba(16,38,69,0.12)] py-2"><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="mission" href="#">Mission</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="editorial-standards" href="#">Editorial Standards</a><a class="block px-4 py-2 font-body-dense text-body-dense text-ink-muted hover:bg-surface-panel hover:text-navy-deep transition-colors" data-path="contribute" href="#">Contribute</a></div></div></div></nav></div><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex items-center px-4 py-1.5 rounded-[999px] bg-navy-deep text-on-navy-bright font-label-section text-label-section hover:bg-navy-soft transition-colors tracking-wide" data-path="the-briefing" href="#">The Briefing</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-bg-canvas"><div class="flex flex-col w-full">
+<div class="max-w-[1080px] w-full mx-auto px-margin py-space-xl flex flex-col gap-space-2xl">
+<!-- Top Ticker / Meta Bar -->
+<div class="flex flex-wrap items-center justify-between gap-space-sm pb-space-sm border-b border-line-hairline text-ink-muted">
+<div class="flex items-center gap-space-md">
+<span class="inline-flex items-center gap-1.5 font-label-section text-label-section uppercase tracking-wider text-navy-deep font-semibold">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span>
+          Live Intelligence Desk
+        </span>
+<span class="text-line-subtle font-label-meta">|</span>
+<span class="font-label-meta text-label-meta">Global Biopharma Regulatory &amp; Supply Flows</span>
+</div>
+<div class="flex items-center gap-space-lg font-label-meta text-label-meta">
+<span class="hidden sm:inline">Tariff Cycle: Section 232 T-minus 48h</span>
+<span class="font-medium text-navy-deep">Updated 08:45 EDT</span>
+</div>
+</div>
+<!-- 1. Hero Editorial Lead Section (Two-Column Asymmetric Grid) -->
+<section class="grid grid-cols-1 lg:grid-cols-[1.35fr_0.65fr] gap-space-xl items-start">
+<!-- Left Column: Lead Story with Inset Chart -->
+<article class="flex flex-col gap-space-lg group">
+<div class="flex flex-wrap items-center gap-space-sm">
+<span class="inline-flex items-center px-2.5 py-1 rounded-[999px] bg-surface-container-high text-navy-deep font-label-section text-label-section font-semibold">
+            Analysis · Policy &amp; Trade
+          </span>
+<div class="flex items-center gap-1.5 ml-auto">
+<span class="px-2 py-0.5 rounded-[999px] bg-surface-panel text-ink-muted font-label-micro text-label-micro uppercase font-medium">United States</span>
+<span class="text-line-subtle font-label-micro">·</span>
+<span class="px-2 py-0.5 rounded-[999px] bg-surface-panel text-ink-muted font-label-micro text-label-micro uppercase font-medium">India</span>
+</div>
+</div>
+<h1 class="font-headline-lead text-headline-lead font-medium text-navy-deep tracking-tight text-balance leading-[1.04] group-hover:text-navy-soft transition-colors cursor-pointer">
+          The tariff wall goes up this week. The medicines India actually sells America walk through a gap in it.
+        </h1>
+<p class="font-body-lead text-body-lead text-ink-muted leading-relaxed font-normal">
+          Section 232’s universal deadline arrives Tuesday. Patented drugs and their ingredients face duties of up to 100 percent. What India ships is exempt, for now, and the “for now” is doing a lot of work.
+        </p>
+<!-- Editorial Graphic: Exposure Breakdown -->
+<div class="p-space-lg bg-surface-panel rounded-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<span class="font-label-section text-label-section uppercase tracking-wider text-navy-deep font-semibold">
+              Tariff Exposure Gap · FY25 US Import Volume
+            </span>
+<span class="font-label-micro text-label-micro text-ink-muted">Source: USITC / Corridor Analysis</span>
+</div>
+<!-- Comparative Bars -->
+<div class="space-y-space-sm">
+<div>
+<div class="flex justify-between font-label-meta text-label-meta mb-1">
+<span class="text-ink-primary font-medium">Off-patent finished generics (India share)</span>
+<span class="text-navy-deep font-semibold">Exempt (47.2% of US volume)</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-variant overflow-hidden">
+<div class="h-full bg-navy-deep" style="width: 47.2%;"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-meta text-label-meta mb-1">
+<span class="text-ink-primary font-medium">Patented biologics &amp; innovative molecules (EU / Swiss / JP)</span>
+<span class="text-error font-semibold">100% Tariff Exposed</span>
+</div>
+<div class="w-full h-2 rounded bg-surface-variant overflow-hidden">
+<div class="h-full bg-amber-risk" style="width: 82%;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-md pt-space-xs font-label-meta text-label-meta text-ink-faint">
+<span class="text-ink-primary font-medium">By The Corridor Desk</span>
+<span>·</span>
+<span>Dateline Washington</span>
+<span>·</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[15px]">schedule</span> 8 min read
+          </span>
+</div>
+</article>
+<!-- Right Column: 'On the wire' Live Intelligence Sidebar -->
+<aside class="flex flex-col bg-surface-panel rounded-lg p-space-lg gap-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-line-hairline">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-navy-deep"></span>
+<h2 class="font-headline-card text-headline-card text-navy-deep font-semibold">On the wire</h2>
+</div>
+<a class="font-body-dense text-body-dense font-medium text-navy-deep hover:text-navy-soft flex items-center gap-1 transition-colors" href="#">
+            Tracker <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Wire Items Feed -->
+<div class="flex flex-col divide-y divide-line-hairline">
+<div class="py-space-md first:pt-0 group cursor-pointer">
+<div class="flex items-center gap-2 mb-1.5 font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Sep 27</span>
+<span>·</span>
+<span>White House</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-primary group-hover:text-navy-soft transition-colors font-medium leading-snug">
+              Section 232’s universal pharma tariff deadline lands September 29
+            </p>
+</div>
+<div class="py-space-md group cursor-pointer">
+<div class="flex items-center gap-2 mb-1.5 font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Sep 26</span>
+<span>·</span>
+<span>Dept of Pharmaceuticals</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-primary group-hover:text-navy-soft transition-colors font-medium leading-snug">
+              China’s share of India’s API and intermediate imports rises to 73.7% in FY25
+            </p>
+</div>
+<div class="py-space-md group cursor-pointer">
+<div class="flex items-center gap-2 mb-1.5 font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Sep 26</span>
+<span>·</span>
+<span>US Dept of Defense</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-primary group-hover:text-navy-soft transition-colors font-medium leading-snug">
+              WuXi AppTec designated a ‘Chinese military company’ under the US BIOSECURE Act
+            </p>
+</div>
+<div class="py-space-md group cursor-pointer">
+<div class="flex items-center gap-2 mb-1.5 font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Sep 25</span>
+<span>·</span>
+<span>Dept of Pharmaceuticals</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-primary group-hover:text-navy-soft transition-colors font-medium leading-snug">
+              India’s bulk-drug PLI passes ₹5,210 crore invested; 39 projects commissioned
+            </p>
+</div>
+<div class="py-space-md last:pb-0 group cursor-pointer">
+<div class="flex items-center gap-2 mb-1.5 font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Sep 25</span>
+<span>·</span>
+<span>GlobalData</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-primary group-hover:text-navy-soft transition-colors font-medium leading-snug">
+              Half of biopharma choosing China to make FDA-approved drugs are US firms; ~21% use WuXi Biologics
+            </p>
+</div>
+</div>
+<div class="pt-space-xs mt-auto">
+<div class="flex items-center justify-between text-ink-faint font-label-micro text-label-micro">
+<span>Aggregating 42 regulatory agencies</span>
+<span class="text-navy-deep font-medium">Auto-refresh: 15s</span>
+</div>
+</div>
+</aside>
+</section>
+<!-- 2. 'The Corridor Briefing' Feature Callout (Solid Navy Block) -->
+<section class="w-full bg-navy-deep rounded-[14px] p-space-xl sm:p-space-2xl text-on-navy-bright shadow-md relative overflow-hidden">
+<!-- Faint architectural background motif -->
+<div class="absolute -right-12 -bottom-12 w-64 h-64 rounded-full bg-navy-soft/30 blur-2xl pointer-events-none"></div>
+<div class="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-space-xl">
+<div class="flex flex-col gap-space-sm max-w-xl">
+<div class="flex items-center gap-space-sm">
+<span class="px-2.5 py-0.5 rounded-[999px] bg-navy-soft text-primary-fixed font-label-micro text-label-micro uppercase font-semibold tracking-wider">
+              Flagship Intelligence
+            </span>
+</div>
+<h2 class="font-headline-section text-headline-section font-semibold text-on-navy-bright tracking-tight">
+            The Corridor Briefing
+          </h2>
+<p class="font-body-dense text-body-dense text-on-navy-muted">
+            One read that matters, assembled for your corridor and function. Free, most weekday mornings.
+          </p>
+</div>
+<!-- Inline Subscription Control -->
+<div class="w-full md:w-auto">
+<form class="flex flex-col sm:flex-row items-center gap-2 p-1.5 bg-navy-soft/60 rounded-[999px] max-w-md w-full border border-navy-soft">
+<div class="flex items-center gap-2 px-3.5 py-1.5 w-full">
+<span class="material-symbols-outlined text-[18px] text-on-navy-muted">mail</span>
+<input class="bg-transparent text-on-navy-bright placeholder-on-navy-muted/60 font-body-dense text-body-dense focus:outline-none w-full" placeholder="name@institution.com" required="" type="email"/>
+</div>
+<button class="w-full sm:w-auto px-6 py-2 rounded-[999px] bg-bg-canvas text-navy-deep font-label-section text-label-section font-semibold hover:bg-surface-panel transition-colors whitespace-nowrap shadow-sm" type="submit">
+              Subscribe
+            </button>
+</form>
+<p class="font-label-micro text-label-micro text-on-navy-muted mt-2 px-3">
+            Read by 38,000+ biopharma executives, USFDA counsel, and supply chain heads.
+          </p>
+</div>
+</div>
+</section>
+<!-- 3. 'Latest Analysis' Section -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b border-line-hairline">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-section text-headline-section font-medium text-navy-deep tracking-tight">
+            Latest analysis
+          </h2>
+<span class="px-2 py-0.5 rounded-[999px] bg-surface-container text-ink-muted font-label-micro text-label-micro">
+            4 new longreads
+          </span>
+</div>
+<a class="font-body-dense text-body-dense font-medium text-navy-deep hover:text-navy-soft flex items-center gap-1 transition-colors" href="#">
+          All analysis <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<!-- Analysis Rows Grid -->
+<div class="flex flex-col divide-y divide-line-hairline">
+<!-- Analysis Row 1 -->
+<article class="py-space-lg flex flex-col md:flex-row md:items-start justify-between gap-space-lg group cursor-pointer">
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Manufacturing &amp; Operations</span>
+<span>·</span>
+<span class="text-ink-muted">US, Europe</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-ink-primary font-medium group-hover:text-navy-soft transition-colors leading-snug">
+              America is pouring concrete. The hard part is the chemistry underneath.
+            </h3>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed line-clamp-2">
+              More than $480 billion in announced US plants, and an active-ingredient gap that no new building closes by itself.
+            </p>
+</div>
+<div class="md:w-44 shrink-0 flex md:flex-col items-center md:items-end justify-between md:justify-center font-label-meta text-label-meta text-ink-faint gap-1">
+<span class="text-ink-primary font-medium">Indianapolis</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 6 min read
+            </span>
+</div>
+</article>
+<!-- Analysis Row 2 -->
+<article class="py-space-lg flex flex-col md:flex-row md:items-start justify-between gap-space-lg group cursor-pointer">
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Quality &amp; Regulatory</span>
+<span>·</span>
+<span class="text-ink-muted">India</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-ink-primary font-medium group-hover:text-navy-soft transition-colors leading-snug">
+              The problem in the file, not the tablet
+            </h3>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed line-clamp-2">
+              Why India’s quality story keeps tripping on documentation, and why market acceptance turns on fixing it.
+            </p>
+</div>
+<div class="md:w-44 shrink-0 flex md:flex-col items-center md:items-end justify-between md:justify-center font-label-meta text-label-meta text-ink-faint gap-1">
+<span class="text-ink-primary font-medium">Mumbai</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 7 min read
+            </span>
+</div>
+</article>
+<!-- Analysis Row 3 -->
+<article class="py-space-lg flex flex-col md:flex-row md:items-start justify-between gap-space-lg group cursor-pointer">
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Supply Chain &amp; Sourcing</span>
+<span>·</span>
+<span class="text-ink-muted">China, India</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-ink-primary font-medium group-hover:text-navy-soft transition-colors leading-snug">
+              India spent a fortune to cut the China cord. The cord got shorter and thicker.
+            </h3>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed line-clamp-2">
+              Record PLI investment, and a dependence that deepened to 73.7 percent. The paradox, and what actually works.
+            </p>
+</div>
+<div class="md:w-44 shrink-0 flex md:flex-col items-center md:items-end justify-between md:justify-center font-label-meta text-label-meta text-ink-faint gap-1">
+<span class="text-ink-primary font-medium">New Delhi</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 6 min read
+            </span>
+</div>
+</article>
+<!-- Analysis Row 4 -->
+<article class="py-space-lg flex flex-col md:flex-row md:items-start justify-between gap-space-lg group cursor-pointer">
+<div class="flex-1 flex flex-col gap-space-xs">
+<div class="flex flex-wrap items-center gap-space-sm font-label-micro text-label-micro text-ink-faint uppercase font-medium">
+<span class="text-navy-deep font-semibold">Deals &amp; Capacity</span>
+<span>·</span>
+<span class="text-ink-muted">Rest of World, Europe, US</span>
+</div>
+<h3 class="font-headline-card text-headline-card text-ink-primary font-medium group-hover:text-navy-soft transition-colors leading-snug">
+              While the West argues about where to build, Korea is buying the biologics high ground
+            </h3>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed line-clamp-2">
+              Samsung Biologics’ $262m deal, a $1.8bn Swiss acquisition, and a bet India’s generic base largely doesn’t make.
+            </p>
+</div>
+<div class="md:w-44 shrink-0 flex md:flex-col items-center md:items-end justify-between md:justify-center font-label-meta text-label-meta text-ink-faint gap-1">
+<span class="text-ink-primary font-medium">Songdo</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">schedule</span> 6 min read
+            </span>
+</div>
+</article>
+</div>
+</section>
+<!-- 4. 'This Week in the Corridor' Weekly Curated Digest -->
+<section class="w-full bg-[#EDF1F8] rounded-xl p-space-xl flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-md border-b border-line-hairline">
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm mb-1">
+<span class="px-2.5 py-0.5 rounded-[999px] bg-navy-deep text-on-navy-bright font-label-micro text-label-micro font-medium uppercase tracking-wider">
+              Weekly digest
+            </span>
+<span class="font-label-meta text-label-meta text-ink-muted">Week of 29 Sep</span>
+</div>
+<h2 class="font-headline-section text-headline-section font-semibold text-navy-deep">
+            This Week in the Corridor
+          </h2>
+<p class="font-body-dense text-body-dense text-ink-muted">The moves that mattered this week</p>
+</div>
+<div class="hidden md:flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-bg-canvas flex items-center justify-center font-label-meta font-bold text-navy-deep">09</span>
+<span class="font-label-meta text-label-meta text-ink-muted">Verified filings</span>
+</div>
+</div>
+<!-- Numbered Digest Grid (2-column layout on desktop) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-space-xl gap-y-space-md">
+<!-- Item 01 -->
+<div class="flex items-start gap-space-md pb-space-sm border-b border-line-hairline/70">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">01</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              US FDA approves AbbVie’s drug for Parkinson’s disease
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Quality &amp; Regulatory</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">United States</span>
+</div>
+</div>
+</div>
+<!-- Item 02 -->
+<div class="flex items-start gap-space-md pb-space-sm border-b border-line-hairline/70">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">02</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              AstraZeneca’s breast cancer pill fails in late-stage trial
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Quality &amp; Regulatory</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">Europe</span>
+</div>
+</div>
+</div>
+<!-- Item 03 -->
+<div class="flex items-start gap-space-md pb-space-sm border-b border-line-hairline/70">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">03</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              Bayer’s Lynkuet (elinzanetant) granted priority review by U.S. FDA for an additional indication
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Quality &amp; Regulatory</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">Europe · United States</span>
+</div>
+</div>
+</div>
+<!-- Item 04 -->
+<div class="flex items-start gap-space-md pb-space-sm border-b border-line-hairline/70">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">04</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              GE HealthCare’s StarGuide GX 4D SPECT/CT now 510(k) pending with the U.S. FDA
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Quality &amp; Regulatory</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">United States</span>
+</div>
+</div>
+</div>
+<!-- Item 05 -->
+<div class="flex items-start gap-space-md pb-space-sm border-b border-line-hairline/70">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">05</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              Alembic Pharmaceuticals gets USFDA inspection closure for its Vadodara bioequivalence facility
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Quality &amp; Regulatory</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">India</span>
+</div>
+</div>
+</div>
+<!-- Item 06 -->
+<div class="flex items-start gap-space-md pb-space-sm border-b border-line-hairline/70">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">06</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              ANI Pharmaceuticals receives FDA approval for generic Everolimus tablets for oral suspension
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Quality &amp; Regulatory</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">United States</span>
+</div>
+</div>
+</div>
+<!-- Item 07 -->
+<div class="flex items-start gap-space-md pb-space-sm border-b border-line-hairline/70">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">07</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              Anupam Rasayan to acquire up to 74.20% in Bliss GVS for $230 million
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Deals &amp; Capacity</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">India</span>
+</div>
+</div>
+</div>
+<!-- Item 08 -->
+<div class="flex items-start gap-space-md pb-space-sm border-b border-line-hairline/70">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">08</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              GSK to acquire best-in-class T-cell engager for multiple myeloma from Chimagen Biosciences
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Deals &amp; Capacity</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">Europe · China</span>
+</div>
+</div>
+</div>
+<!-- Item 09 (Full width on span) -->
+<div class="md:col-span-2 flex items-start gap-space-md pt-space-xs">
+<span class="font-headline-card text-headline-card font-medium text-navy-soft/40 tabular-nums">09</span>
+<div class="flex flex-col gap-1">
+<p class="font-body-dense text-body-dense text-ink-primary font-medium leading-snug">
+              Viatris sues Novo Nordisk over generic Wegovy patent dispute
+            </p>
+<div class="flex items-center gap-1 font-label-micro text-label-micro text-ink-muted">
+<span>Policy &amp; Trade</span>
+<span>·</span>
+<span class="text-navy-deep font-medium">United States · Europe</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Action -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-md border-t border-line-hairline">
+<form class="flex items-center gap-2 w-full sm:w-auto">
+<input class="px-4 py-2 rounded-[999px] bg-bg-canvas text-ink-primary placeholder-ink-faint font-body-dense text-body-dense border border-line-subtle focus:outline-none focus:border-navy-deep w-full sm:w-64" placeholder="Work email for digest" type="email"/>
+<button class="px-4 py-2 rounded-[999px] bg-navy-deep text-on-navy-bright font-label-section text-label-section hover:bg-navy-soft transition-colors whitespace-nowrap" type="submit">
+            Get the weekly
+          </button>
+</form>
+<a class="font-body-dense text-body-dense font-medium text-navy-deep hover:text-navy-soft flex items-center gap-1 transition-colors" href="#">
+          See the full tracker <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+</section>
+<!-- 5. Global 'Corridors' Interactive Hub Grid -->
+<section class="flex flex-col gap-space-lg">
+<div class="flex items-center justify-between pb-space-sm border-b border-line-hairline">
+<div class="flex items-center gap-space-sm">
+<h2 class="font-headline-section text-headline-section font-medium text-navy-deep tracking-tight">
+            Corridors
+          </h2>
+<span class="font-body-dense text-body-dense text-ink-muted">Active biopharmaceutical trade channels</span>
+</div>
+<span class="font-label-meta text-label-meta text-ink-faint">6 key trade axes</span>
+</div>
+<!-- 3-Column Structured Grid with Hairline Channels -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-md">
+<!-- Corridor 1: India -->
+<a class="flex flex-col justify-between p-space-lg bg-surface-panel rounded-lg hover:bg-surface-variant transition-colors group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-card text-headline-card text-navy-deep font-semibold">India</span>
+<span class="px-2 py-0.5 rounded-[999px] bg-navy-deep text-on-navy-bright font-label-micro text-label-micro font-medium">11 items · Lead</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed">
+              Outbound generics, the China input dependency, and the manufacturing base the map is built on.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-lg font-label-section text-label-section text-navy-deep font-semibold">
+<span>Explore India corridor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Corridor 2: United States -->
+<a class="flex flex-col justify-between p-space-lg bg-surface-panel rounded-lg hover:bg-surface-variant transition-colors group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-card text-headline-card text-navy-deep font-semibold">United States</span>
+<span class="px-2 py-0.5 rounded-[999px] bg-surface-container-high text-navy-deep font-label-micro text-label-micro font-medium">9 items</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed">
+              The demand corridor: reshoring capital, tariff policy, and the buyers everyone is building to reach.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-lg font-label-section text-label-section text-navy-deep font-semibold">
+<span>Explore US corridor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Corridor 3: Europe -->
+<a class="flex flex-col justify-between p-space-lg bg-surface-panel rounded-lg hover:bg-surface-variant transition-colors group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-card text-headline-card text-navy-deep font-semibold">Europe</span>
+<span class="px-2 py-0.5 rounded-[999px] bg-surface-container-high text-navy-deep font-label-micro text-label-micro font-medium">7 items</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed">
+              Branded and biologics; Ireland, Switzerland and the CDMO base supplying the world.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-lg font-label-section text-label-section text-navy-deep font-semibold">
+<span>Explore Europe corridor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Corridor 4: China -->
+<a class="flex flex-col justify-between p-space-lg bg-surface-panel rounded-lg hover:bg-surface-variant transition-colors group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-card text-headline-card text-navy-deep font-semibold">China</span>
+<span class="px-2 py-0.5 rounded-[999px] bg-surface-container-high text-navy-deep font-label-micro text-label-micro font-medium">5 items</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed">
+              The base of the chain: the ingredients almost everyone still depends on.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-lg font-label-section text-label-section text-navy-deep font-semibold">
+<span>Explore China corridor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Corridor 5: MENA -->
+<a class="flex flex-col justify-between p-space-lg bg-surface-panel rounded-lg hover:bg-surface-variant transition-colors group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-card text-headline-card text-navy-deep font-semibold">MENA</span>
+<span class="px-2 py-0.5 rounded-[999px] bg-surface-container-high text-navy-deep font-label-micro text-label-micro font-medium">4 items</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed">
+              A large import market and a hard localization drive, from Riyadh to Cairo.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-lg font-label-section text-label-section text-navy-deep font-semibold">
+<span>Explore MENA corridor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+<!-- Corridor 6: Rest of World -->
+<a class="flex flex-col justify-between p-space-lg bg-surface-panel rounded-lg hover:bg-surface-variant transition-colors group" href="#">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-headline-card text-headline-card text-navy-deep font-semibold">Rest of World</span>
+<span class="px-2 py-0.5 rounded-[999px] bg-surface-container-high text-navy-deep font-label-micro text-label-micro font-medium">4 items</span>
+</div>
+<p class="font-body-dense text-body-dense text-ink-muted leading-relaxed">
+              Korea, Singapore and the friend-shored biologics capacity redrawing where medicine is made.
+            </p>
+</div>
+<div class="flex items-center justify-between pt-space-lg font-label-section text-label-section text-navy-deep font-semibold">
+<span>Explore Global corridor</span>
+<span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</a>
+</div>
+</section>
+</div>
+</div></main><footer class="w-full bg-navy-deep text-on-navy-bright border-t border-navy-soft"><div class="max-w-[1080px] mx-auto px-margin py-space-2xl"><div class="flex flex-col md:flex-row md:items-start justify-between gap-space-xl pb-space-xl border-b border-navy-soft/60"><div class="space-y-space-sm"><div class="flex items-center gap-space-sm"><svg class="w-6 h-6 shrink-0" fill="none" viewbox="0 0 28 28" xmlns="http://www.w3.org/2000/svg"><rect fill="none" height="24" rx="1" stroke="#FFFFFF" stroke-width="1.75" width="24" x="2" y="2"></rect><path d="M8 7H14.5C17.5 7 19.5 8.7 19.5 11.5C19.5 14.3 17.5 16 14.5 16H8V7Z" stroke="#FFFFFF" stroke-linejoin="round" stroke-width="1.75"></path><path d="M14 16L20 22" stroke="#FFFFFF" stroke-linecap="round" stroke-width="1.75"></path><circle cx="14.5" cy="11.5" fill="#FFFFFF" r="1.25"></circle></svg><span class="font-headline-card text-headline-card font-medium tracking-tight text-on-navy-bright">Pharma Corridor</span></div><p class="font-body-dense text-body-dense text-on-navy-muted max-w-sm">Authoritative biopharmaceutical intelligence, trade corridor flows, and clinical cross-border regulatory analysis.</p></div><nav class="flex flex-wrap items-center gap-x-space-lg gap-y-space-sm"><a class="font-body-dense text-body-dense text-on-navy-muted hover:text-on-navy-bright transition-colors" data-path="mission" href="#">About</a><a class="font-body-dense text-body-dense text-on-navy-muted hover:text-on-navy-bright transition-colors" data-path="editorial-standards" href="#">Editorial standards</a><a class="font-body-dense text-body-dense text-on-navy-muted hover:text-on-navy-bright transition-colors" data-path="contribute" href="#">Contribute</a><a class="font-body-dense text-body-dense text-on-navy-muted hover:text-on-navy-bright transition-colors" data-path="corrections" href="#">Corrections</a></nav></div><div class="pt-space-md flex flex-col sm:flex-row items-start sm:items-center justify-between gap-space-sm font-label-micro text-label-micro text-on-navy-muted tracking-wider"><p>Pharma Corridor · pharmacorridor.com · intelligence prototype</p><p class="text-on-navy-muted/80">© 2025 Global Pharmaceutical Intelligence Group. All rights reserved.</p></div></div></footer></body></html>
